@@ -1,0 +1,438 @@
+/* 
+ADJUSTING CSS FROM LINES 1 to 130 IS NOT NECESSARY
+
+You may choose to practice css by making changes to visuals if you'd like but otherwise, jump down to line 130 to get started!
+*/
+
+html {
+    margin:0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #3d2514;
+    background-image: url(../img/burger-bg.png);
+    background-repeat: repeat;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  a,
+  a:focus,
+  a:hover {
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: #ffc045;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+  }
+  
+  section {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .logo {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .section-title {
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #3d2514;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    font-weight: 500;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-shadow: 4px 5px #fee7ba;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  .hero-subtitle {
+    font-weight: 500;
+  }
+  
+  .menu-item {
+    background-color: rgba(255, 192, 69, 0.8);
+  }
+  
+  .button {
+    background-color: #bf2222;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 16px 40px;
+    line-height: normal;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    color: #fff;
+    background-color: #ffc045;
+  }
+  
+  .price {
+    background-color: #bf2222;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding: 16px 40px;
+    line-height: normal;
+    display: inline-block;
+  }
+  
+  footer {
+    margin-top: 20px;
+    /* padding: 30px 0; */
+    background-color: #3d2514;
+    color: #ffffff;
+  }
+  
+  /* 
+  TODO: ELEMENTS THAT NEED FONT SIZING OR LAYOUT APPLIED
+  
+  - Utilize em or rem to control relative font sizing for any typography
+  - Use Flexbox or CSS Grid to control layout for the following sections: Hero, Menu, Features and Footer
+  
+  */
+  /* name and date, date, and assignment */
+  /* -------------------------------------------------------------- */
+  /* 
+  Adrian Komie
+  1/28/2024
+  3.6 Make It Responsive
+   */
+  
+   /* desktop mockup font sizes */
+  .container {
+    /* HINT: Check out the desktop mockup for width limitations that go here */
+    max-width: 1200px;
+    /* centers content */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+  }
+  
+  .section-title {
+    font-size: 3.125rem;
+  }
+  
+  .section-subtitle {
+    font-size: 2rem;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Hero --------------------------------------------------*/
+  
+  .hero-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-item {
+    /* makes both hero-items half the space */
+    flex-basis: 50%;
+  }
+  
+  .hero-title {
+    /* HINT: Reminder to add relative font sizing for any typography for this section! */
+    font-size: 3.125em;
+    margin-top: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    width: 100%;
+    padding-right: 1rem;
+  }
+  
+  /* Menu -----------------------------------*/
+  
+  .menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  .menu-item {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+  
+  .menu-burger {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+  }
+  
+  .menu-description {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+  
+  .price {
+    font-size: 1rem;
+    padding: 0.7rem 1.6rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  /* Features ------------------------------------------*/
+  
+  .features-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+  
+  .features-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .features-item p {
+    font-size: 1.25rem;
+  }
+  
+  /* Footer Styles -----------------------------------*/
+  
+  footer {
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-item {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .footer-item h4 {
+    font-size: 1.25rem;
+  }
+  
+  .footer-item img {
+    width: 50%;
+    margin: 0 auto;
+    max-width: 150px;
+  }
+  
+  /* 
+  TODO: ADD MEDIA QUERIES BELOW 
+  
+  - Should have at least 4 media queries that adjust at least one element each.
+  
+  */
+  
+  /* MEDIA QUERY 1 --------------------- */
+  /* for large screens */
+  @media only screen and (max-width: 1200px) and (min-width: 993px) {
+    .hero-title {
+      font-size: 3.5em;
+    }
+  }
+  /* MEDIA QUERY 2 --------------------- */
+  /* for medium screens */
+  @media only screen and (max-width: 992px) and (min-width: 739px) {
+    .menu-wrapper {
+      justify-content: space-between;
+    }
+  
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+  /* MEDIA QUERY 3 --------------------- */
+  /* for small screens */
+  /* mobile mock-up aligned */
+  @media only screen and (max-width: 738px) and (min-width: 481px) {
+    .container {
+      padding-top: 5rem;
+    }
+  
+    .logo {
+      font-size: 2rem;
+    }
+  
+    .hero-wrapper {
+      flex-direction: column;
+      padding: 2rem 1rem;
+    }
+  
+    .hero-item {
+      flex-basis: 100%;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+      padding-top: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .section-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .hero-wrapper img {
+      width: 70%;
+    }
+  
+    .menu-wrapper {
+      display: block;
+    }
+  
+    .menu-item {
+      flex: none;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .menu-burger {
+      font-size: 1.75rem;
+    }
+  
+    .menu-description {
+      font-size: 1rem;
+    }
+  
+    .features-wrapper {
+      flex-direction: column;
+    }
+  
+    .features-item h3 {
+      font-size: 1.5rem;
+    }
+  
+    .features-item p {
+      font-size: 1rem;
+    }
+  
+    .footer-wrapper {
+      flex-direction: column;
+    }
+  
+    .footer-item h2 {
+      font-size: 1.5rem;
+    }
+  
+    .footer-item h4,
+    p {
+      font-size: 1rem;
+    }
+  
+    .footer-item img {
+      width: 100%;
+      max-width: 130px;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* MEDIA QUERY 4 --------------------- */
+  @media only screen and (max-width: 480px) {
+  /* worked on not having redundancy */
+    .hero-wrapper,
+    .menu-wrapper,
+    .features-wrapper,
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle,
+    .menu-burger,
+    .menu-description,
+    .features-item h3,
+    .features-item p,
+    .footer-item h4,
+    .footer-item p {
+      font-size: 0.9rem;
+    }
+  
+    .logo,
+    .section-title,
+    .section-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .footer-item img {
+      width: 60%;
+      max-width: 120px;
+    }
+  
+    .menu-item {
+      max-width: calc(70% - 1rem);
+    }
+  }
